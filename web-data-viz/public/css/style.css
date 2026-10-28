@@ -1,0 +1,728 @@
+
+/* =========================================
+   SURFTRACK - PÁGINA INICIAL
+========================================= */
+
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #073B4C;
+    background-color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: "Playfair Display", serif;
+}
+
+
+/* =========================================
+   HEADER E NAVBAR
+========================================= */
+
+.header {
+    width: 100%;
+    min-height: 690px;
+
+    background-image: url("../assets/imgs/long surf - headder.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    width: 94%;
+    max-width: 1400px;
+    height: 95px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* LOGO */
+
+.logo img {
+    width: 205px;
+    display: block;
+}
+
+/* LINKS PRINCIPAIS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    margin-left: 10px;
+}
+
+.nav-links a {
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #17849B;
+}
+
+/* LOGIN E CADASTRO */
+
+.nav-conta {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    margin-left: auto;
+}
+
+.nav-conta a {
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.link-login:hover {
+    color: #17849B;
+}
+
+/* BOTÃO CADASTRAR */
+
+.btn-cadastro {
+    display: inline-block;
+
+    background-color: #073B4C;
+    color: #FFFFFF;
+
+    padding: 13px 28px;
+    border-radius: 30px;
+}
+
+.btn-cadastro:hover {
+    background-color: #12647A;
+    color: #FFFFFF;
+}
+
+
+
+/* =========================================
+   HERO - BANNER PRINCIPAL
+========================================= */
+
+.hero {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    padding-top: 115px;
+    padding-bottom: 100px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    font-weight: 600;
+    line-height: 1.13;
+    letter-spacing: -1px;
+    color: #073B4C;
+}
+
+
+.hero p {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.7;
+
+    color: #092E3D;
+
+    margin-top: 24px;
+    margin-bottom: 30px;
+
+    text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.7);
+}
+
+
+.btn-hero {
+    display: inline-block;
+    background-color: #073B4C;
+    color: #FFFFFF;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    padding: 15px 30px;
+    border-radius: 30px;
+
+    transition: background-color 0.2s;
+}
+
+.btn-hero:hover {
+    background-color: #12647A;
+}
+
+
+/* =========================================
+   SEÇÃO DE PRAIAS
+========================================= */
+
+.secao-praias {
+    padding: 85px 0 95px;
+    background-color: #FFFFFF;
+}
+
+.praias-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    margin-bottom: 40px;
+}
+
+.subtitulo {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #6F9CAC;
+    margin-bottom: 12px;
+}
+
+.praias-titulo h2 {
+    font-size: 43px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #073B4C;
+}
+
+.praias-titulo p {
+    font-size: 14px;
+    color: #527080;
+    margin-top: 12px;
+}
+
+.link-praias {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.link-praias:hover {
+    color: #17849B;
+}
+
+
+/* CARDS DAS PRAIAS */
+
+.cards-praias {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px 20px;
+}
+
+.card-praia {
+    grid-column: span 3;
+    min-width: 0;
+}
+
+.card-praia:nth-child(n+5) {
+    grid-column: span 4;
+}
+
+.card-praia img {
+    display: block;
+    width: 100%;
+    height: 175px;
+
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.card-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 12px 6px;
+}
+
+.card-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #073B4C;
+}
+
+.card-info p {
+    font-size: 12px;
+    color: #628797;
+    margin-top: 2px;
+}
+
+.seta-card {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #EAF1F3;
+
+    font-size: 18px;
+    color: #073B4C;
+}
+
+
+/* =========================================
+   SEÇÃO COMO FUNCIONA
+========================================= */
+
+.secao-como-funciona {
+    padding: 85px 0;
+    background-color: #F6F4F0;
+}
+
+.como-funciona-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.como-funciona-texto {
+    width: 34%;
+}
+
+.como-funciona-texto h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.como-funciona-texto p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #527080;
+    margin-top: 15px;
+}
+
+.btn-saiba-mais {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 13px 25px;
+
+    background-color: #073B4C;
+    color: white;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    border-radius: 25px;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #12647A;
+}
+
+
+/* BLOCOS DE FUNCIONALIDADES */
+
+.funcionalidades {
+    width: 66%;
+    display: flex;
+    align-items: stretch;
+}
+
+.funcionalidade {
+    flex: 1;
+    padding: 10px 22px;
+    border-left: 1px solid #D9E1E2;
+}
+
+.funcionalidade:first-child {
+    border-left: none;
+}
+
+.icone-funcionalidade {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+    background-color: #D8E8EC;
+
+    color: #073B4C;
+    font-size: 30px;
+}
+
+.icone-funcionalidade img {
+    width: 44px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.funcionalidade h3 {
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.funcionalidade p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #527080;
+    text-align: center;
+}
+
+
+/* =========================================
+   BANNER FINAL
+========================================= */
+
+.banner-final {
+    min-height: 390px;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(3, 35, 47, 0.75),
+            rgba(3, 35, 47, 0.05)
+        ),
+        url("../assets/imgs/Imagem Footer.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner-final-conteudo {
+    max-width: 550px;
+    padding: 65px 0;
+    color: #FFFFFF;
+}
+
+.banner-final .subtitulo {
+    color: #FFFFFF;
+}
+
+.banner-final h2 {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.banner-final p {
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-top: 18px;
+    margin-bottom: 25px;
+}
+
+.btn-banner {
+    display: inline-block;
+
+    padding: 14px 28px;
+    background-color: #FFFFFF;
+    color: #073B4C;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    border-radius: 30px;
+}
+
+.btn-banner:hover {
+    background-color: #DCECEF;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+.footer {
+    background-color: #032B3A;
+    color: #FFFFFF;
+
+    padding: 40px 0 25px;
+}
+
+.footer-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+.logo-footer img {
+    width: 190px;
+    display: block;
+
+    filter: brightness(0) invert(1);
+}
+
+.footer-links {
+    display: flex;
+    gap: 35px;
+}
+
+.footer-links a {
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #93D4E3;
+}
+
+.copyright {
+    font-size: 11px;
+    color: #B3C5CD;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - TABLETS
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        gap: 16px;
+    }
+
+    .logo img {
+        width: 165px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-conta {
+        gap: 15px;
+    }
+
+    .nav-links a,
+    .nav-conta a {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .cards-praias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-praia,
+    .card-praia:nth-child(n+5) {
+        grid-column: auto;
+    }
+
+    .card-praia img {
+        height: 200px;
+    }
+
+    .como-funciona-conteudo {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+    }
+
+    .como-funciona-texto,
+    .funcionalidades {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - CELULARES
+========================================= */
+
+@media (max-width: 650px) {
+
+    .header {
+        min-height: 620px;
+        background-position: 58% center;
+    }
+
+    .navbar {
+        width: 92%;
+        height: auto;
+
+        padding: 22px 0;
+
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 155px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .nav-conta {
+        gap: 10px;
+    }
+
+    .nav-links a,
+    .nav-conta a {
+        font-size: 10px;
+    }
+
+    .btn-cadastro {
+        padding: 9px 13px;
+    }
+
+    .hero {
+        width: 90%;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+        letter-spacing: -0.5px;
+    }
+
+    .hero p {
+        font-size: 13px;
+        max-width: 340px;
+    }
+
+    .hero p br {
+        display: none;
+    }
+
+    .btn-hero {
+        font-size: 11px;
+        padding: 13px 22px;
+    }
+
+    .secao-praias {
+        padding: 60px 0;
+    }
+
+    .praias-titulo {
+        display: block;
+    }
+
+    .praias-titulo h2 {
+        font-size: 32px;
+    }
+
+    .praias-titulo p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .link-praias {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .cards-praias {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card-praia img {
+        height: 220px;
+    }
+
+    .secao-como-funciona {
+        padding: 60px 0;
+    }
+
+    .como-funciona-texto h2 {
+        font-size: 30px;
+    }
+
+    .funcionalidades {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .funcionalidade {
+        border-left: none;
+        border-top: 1px solid #D9E1E2;
+        padding: 25px 15px 0;
+    }
+
+    .funcionalidade:first-child {
+        border-top: none;
+    }
+
+    .banner-final {
+        min-height: 350px;
+    }
+
+    .banner-final h2 {
+        font-size: 33px;
+    }
+
+    .banner-final p {
+        font-size: 13px;
+    }
+
+    .footer-conteudo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
