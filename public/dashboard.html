@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | SurfTrack</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="./index.html" class="logo">
+                <img src="./assets/imgs/Logo SURFTRACK.png" alt="Logo SurfTrack">
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Início</a>
+                <a href="index.html#praias">Praias</a>
+                <a href="index.html#como-funciona">Como Funciona</a>
+            </div>
+
+            <div class="nav-perfil">
+                <button type="button" class="btn-perfil">
+                    Meu Perfil
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- BOAS-VINDAS -->
+        <section class="boas-vindas">
+
+            <div class="boas-vindas-conteudo">
+                <span class="subtitulo">DASHBOARD</span>
+
+                <h1>Bem-vindo, <span id="nome_usuario">Surfista</span>!</h1>
+
+                <p>
+                    Registre suas sessões, acompanhe suas estatísticas
+                    e evolua no surf.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- INDICADORES -->
+        <section class="indicadores">
+
+            <div class="card-indicador">
+                <div class="icone-indicador">
+                    <span>▣</span>
+                </div>
+
+                <div class="info-indicador">
+                    <h2 id="total_sessoes">0</h2>
+                    <p>Sessões registradas</p>
+                </div>
+            </div>
+
+            <div class="card-indicador">
+                <div class="icone-indicador">
+                    <span>◷</span>
+                </div>
+
+                <div class="info-indicador">
+                    <h2 id="tempo_total">0h 0min</h2>
+                    <p>Tempo total no mar</p>
+                </div>
+            </div>
+
+            <div class="card-indicador">
+                <div class="icone-indicador">
+                    <span>≈</span>
+                </div>
+
+                <div class="info-indicador">
+                    <h2 id="total_ondas">0</h2>
+                    <p>Ondas surfadas</p>
+                </div>
+            </div>
+
+            <div class="card-indicador">
+                <div class="icone-indicador">
+                    <span>☆</span>
+                </div>
+
+                <div class="info-indicador">
+                    <h2 id="nota_media">0,0</h2>
+                    <p>Nota média</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <section class="conteudo-dashboard">
+
+            <!-- FORMULÁRIO -->
+            <div class="card-formulario">
+
+                <h2>Registrar nova sessão</h2>
+
+                <form id="form_sessao">
+
+                    <div class="campo">
+                        <label for="input_data">
+                            Data da sessão
+                        </label>
+
+                        <input type="date" id="input_data" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="select_praia">
+                            Praia
+                        </label>
+
+                        <select id="select_praia" required>
+                            <option value="" selected disabled>
+                                Selecione uma praia
+                            </option>
+                            <option value="1">Quebra-Mar</option>
+                            <option value="2">Arpoador</option>
+                            <option value="3">Barra da Tijuca</option>
+                            <option value="4">Saquarema</option>
+                            <option value="5">Maresias</option>
+                            <option value="6">Praia da Baleia</option>
+                            <option value="7">Praia do Tombo</option>
+                        </select>
+                    </div>
+
+                    <div class="linha-campos">
+
+                        <div class="campo">
+                            <label for="input_duracao">
+                                Duração (min)
+                            </label>
+
+                            <input type="number" id="input_duracao" min="1" placeholder="Ex: 60" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="input_ondas">
+                                Quantidade de ondas
+                            </label>
+
+                            <input type="number" id="input_ondas" min="0" placeholder="Ex: 10" required>
+                        </div>
+
+                    </div>
+
+                    <div class="linha-campos">
+
+                        <div class="campo">
+                            <label for="input_prancha">
+                                Tamanho da prancha (pés)
+                            </label>
+
+                            <input type="number" id="input_prancha" min="0.1" max="99.9" step="0.1"
+                                placeholder="Ex: 6.2" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="input_nota">
+                                Nota da sessão (0 a 10)
+                            </label>
+
+                            <input type="number" id="input_nota" min="0" max="10" step="1" placeholder="Ex: 8" required>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn-registrar">
+                        Registrar sessão →
+                    </button>
+
+                    <p id="mensagem_sessao"></p>
+
+                </form>
+
+            </div>
+
+            <!-- HISTÓRICO -->
+            <div class="card-historico">
+
+                <div class="historico-titulo">
+                    <h2>Minhas últimas sessões</h2>
+
+                    <a href="#" id="ver_todas">
+                        Ver todas →
+                    </a>
+                </div>
+
+                <div class="tabela-container">
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Praia</th>
+                                <th>Duração</th>
+                                <th>Ondas</th>
+                                <th>Prancha</th>
+                                <th>Nota</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tabela_sessoes">
+
+                            <tr>
+                                <td colspan="6" class="sem-sessoes">
+                                    Nenhuma sessão registrada ainda.
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <p>© 2026 SurfTrack. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
