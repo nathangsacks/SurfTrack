@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | SurfTrack</title>
+
+    <link rel="icon" type="image/jpeg" href="./assets/icon/Icon site.jpg">
+
+    <link rel="stylesheet" href="./css/login.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="./js/login.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="./index.html" class="logo">
+                <img src="./assets/imgs/Logo SURFTRACK.png"
+                     alt="Logo SurfTrack">
+            </a>
+
+            <div class="nav-links">
+                <a href="./index.html">INÍCIO</a>
+                <a href="./index.html#praias">PRAIAS</a>
+                <a href="./index.html#como-funciona">COMO FUNCIONA</a>
+            </div>
+
+            <div class="nav-conta">
+                <a href="./login.html" class="link-login">LOGIN</a>
+                <a href="./cadastro.html" class="btn-cadastro">
+                    CADASTRAR
+                </a>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-login">
+
+        <!-- LADO ESQUERDO: IMAGEM -->
+        <section class="login-imagem">
+
+            <div class="login-imagem-texto">
+
+                <h1>
+                    Bem-vindo<br>
+                    de volta
+                </h1>
+
+                <div class="linha-decorativa"></div>
+
+                <p>
+                    Entre na sua conta para continuar
+                    registrando suas sessões e
+                    acompanhar sua evolução
+                    no surf.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- LADO DIREITO: FORMULÁRIO -->
+        <section class="login-formulario">
+
+            <div class="formulario-conteudo">
+
+                <h2>Fazer login</h2>
+
+                <p class="descricao-login">
+                    Acesse sua conta para continuar
+                    sua jornada no SurfTrack.
+                </p>
+
+
+                <form id="form_login">
+
+                    <!-- E-MAIL -->
+                    <div class="campo">
+
+                        <label for="email_input">E-mail</label>
+
+                        <input
+                            type="email"
+                            id="email_input"
+                            placeholder="seu@email.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- SENHA -->
+                    <div class="campo">
+
+                        <label for="senha_input">Senha</label>
+
+                        <div class="campo-senha">
+
+                            <input
+                                type="password"
+                                id="senha_input"
+                                placeholder="Sua senha"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="btn_mostrar_senha"
+                                class="btn-mostrar-senha"
+                                aria-label="Mostrar senha"
+                            >
+                                Mostrar
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MENSAGEM DE VALIDAÇÃO -->
+                    <p id="mensagem_erro" role="alert"></p>
+
+
+                    <!-- BOTÃO DE LOGIN -->
+                    <button type="submit" class="btn-entrar">
+                        Entrar →
+                    </button>
+
+                </form>
+
+
+                <!-- LINK PARA CADASTRO -->
+                <div class="cadastro-link">
+
+                    <p>
+                        Ainda não tem uma conta?
+                        <a href="./cadastro.html">
+                            Cadastre-se
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

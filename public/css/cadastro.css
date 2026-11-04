@@ -1,0 +1,515 @@
+
+/* =========================================
+   SURFTRACK - PÁGINA DE CADASTRO
+========================================= */
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #073B4C;
+    background-color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input {
+    font-family: "Poppins", sans-serif;
+}
+
+h1, h2 {
+    font-family: "Playfair Display", serif;
+}
+
+
+
+/* =========================================
+   HEADER E NAVBAR - PADRÃO SURFTRACK
+========================================= */
+
+.header {
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.navbar {
+    width: 94%;
+    max-width: 1400px;
+    height: 90px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* LOGO */
+
+.logo img {
+    width: 205px;
+    display: block;
+}
+
+/* LINKS PRINCIPAIS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a,
+.nav-conta a {
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.link-login:hover {
+    color: #17849B;
+}
+
+/* LOGIN E CADASTRO */
+
+.nav-conta {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto;
+}
+
+/* LINK LOGIN */
+
+.link-login {
+    padding-bottom: 5px;
+}
+
+/* BOTÃO CADASTRAR */
+
+.btn-cadastro {
+    background-color: #073B4C;
+    color: #FFFFFF;
+
+    padding: 13px 28px;
+    border-radius: 30px;
+}
+
+.btn-cadastro:hover {
+    background-color: #12647A;
+    color: #FFFFFF;
+}
+
+
+
+/* =========================================
+   ESTRUTURA PRINCIPAL
+========================================= */
+
+.main-cadastro {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 90px);
+}
+
+
+/* =========================================
+   LADO ESQUERDO - IMAGEM
+========================================= */
+
+
+
+.cadastro-imagem {
+    width: 55%;
+    min-height: 850px;
+
+    background-image: url("../assets/imgs/Foto pagina de cadastro.jpg");
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+/* TEXTO SOBRE A FOTOGRAFIA */
+
+.cadastro-imagem-texto {
+    position: absolute;
+
+    top: 12%;
+    right: 4%;
+    left: auto;
+
+    width: 46%;
+    max-width: 370px;
+
+    color: #073B4C;
+}
+
+/* TÍTULO */
+
+.cadastro-imagem-texto h1 {
+    font-size: 43px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* LINHA DECORATIVA */
+
+.linha-decorativa {
+    width: 60px;
+    height: 3px;
+
+    background-color: #2B6F77;
+    margin: 22px 0;
+}
+
+/* SUBTÍTULO */
+
+.cadastro-imagem-texto p {
+    max-width: 350px;
+
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.7;
+
+    color: #073B4C;
+}
+
+
+
+/* =========================================
+   LADO DIREITO - FORMULÁRIO
+========================================= */
+
+.cadastro-formulario {
+    width: 45%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 55px 50px;
+    background-color: #FFFFFF;
+}
+
+.formulario-conteudo {
+    width: 100%;
+    max-width: 480px;
+}
+
+.formulario-conteudo h2 {
+    font-size: 58px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+.descricao-cadastro {
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #526B7B;
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   CAMPOS DO FORMULÁRIO
+========================================= */
+
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.campo input {
+    width: 100%;
+    height: 58px;
+
+    padding: 0 18px;
+
+    border: 1px solid #D3DCE2;
+    border-radius: 9px;
+
+    background-color: #FFFFFF;
+
+    font-size: 14px;
+    color: #073B4C;
+
+    outline: none;
+}
+
+.campo input::placeholder {
+    color: #9BAAB5;
+}
+
+.campo input:focus {
+    border-color: #2B6F77;
+}
+
+
+/* MOSTRAR E OCULTAR SENHA */
+
+.campo-senha {
+    position: relative;
+}
+
+.campo-senha input {
+    padding-right: 95px;
+}
+
+.btn-mostrar-senha {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: none;
+    border: none;
+
+    color: #527080;
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.btn-mostrar-senha:hover {
+    color: #073B4C;
+}
+
+
+/* =========================================
+   MENSAGENS DO FORMULÁRIO
+========================================= */
+
+#mensagem_erro {
+    color: #B42318;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+#mensagem_sucesso {
+    color: #237448;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+#mensagem_erro:empty,
+#mensagem_sucesso:empty {
+    display: none;
+}
+
+
+/* =========================================
+   BOTÃO CADASTRAR CONTA
+========================================= */
+
+.btn-criar-conta {
+    width: 100%;
+    height: 60px;
+
+    background-color: #073B4C;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-criar-conta:hover {
+    background-color: #12647A;
+}
+
+.btn-criar-conta:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   LINK PARA LOGIN
+========================================= */
+
+.login-link {
+    margin-top: 30px;
+    padding-top: 30px;
+
+    border-top: 1px solid #D3DCE2;
+    text-align: center;
+}
+
+.login-link p {
+    font-size: 14px;
+    color: #526B7B;
+}
+
+.login-link a {
+    color: #12647A;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - TABLETS
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        gap: 20px;
+    }
+
+    .logo img {
+        width: 170px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a,
+    .nav-conta a {
+        font-size: 12px;
+    }
+
+    .nav-conta {
+        gap: 15px;
+    }
+
+    .cadastro-imagem,
+    .cadastro-formulario {
+        width: 50%;
+    }
+
+    .cadastro-formulario {
+        padding: 40px 30px;
+    }
+
+    .cadastro-imagem-texto h1 {
+        font-size: 43px;
+    }
+
+    .formulario-conteudo h2 {
+        font-size: 45px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - CELULARES
+========================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        width: 92%;
+        height: auto;
+
+        padding: 20px 0;
+
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 145px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-conta {
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .nav-links a,
+    .nav-conta a {
+        font-size: 10px;
+    }
+
+    .btn-cadastro {
+        padding: 9px 12px;
+    }
+
+    .main-cadastro {
+        flex-direction: column;
+    }
+
+    .cadastro-imagem {
+        width: 100%;
+        min-height: 350px;
+        background-position: center 55%;
+    }
+
+    .cadastro-imagem-texto {
+        top: 10%;
+        left: 7%;
+        width: 86%;
+    }
+
+    .cadastro-imagem-texto h1 {
+        font-size: 35px;
+    }
+
+    .cadastro-imagem-texto p {
+        font-size: 12px;
+        max-width: 270px;
+    }
+
+    .linha-decorativa {
+        margin: 15px 0;
+    }
+
+    .cadastro-formulario {
+        width: 100%;
+        padding: 45px 25px;
+    }
+
+    .formulario-conteudo h2 {
+        font-size: 40px;
+    }
+
+    .descricao-cadastro {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+}

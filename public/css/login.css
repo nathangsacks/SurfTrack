@@ -1,0 +1,472 @@
+
+/* =========================================
+   SURFTRACK - PÁGINA DE LOGIN
+========================================= */
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #073B4C;
+    background-color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input {
+    font-family: "Poppins", sans-serif;
+}
+
+h1, h2 {
+    font-family: "Playfair Display", serif;
+}
+
+
+/* =========================================
+   HEADER E NAVBAR
+========================================= */
+
+.header {
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.navbar {
+    width: 94%;
+    max-width: 1400px;
+    height: 90px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo img {
+    width: 205px;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a,
+.nav-conta a {
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.link-login:hover {
+    color: #17849B;
+}
+
+.nav-conta {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.link-login {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #2B6F77;
+}
+
+.btn-cadastro {
+    background-color: #073B4C;
+    color: #FFFFFF;
+
+    padding: 13px 28px;
+    border-radius: 30px;
+}
+
+.btn-cadastro:hover {
+    background-color: #12647A;
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   ESTRUTURA PRINCIPAL
+========================================= */
+
+.main-login {
+    display: flex;
+    width: 100%;
+    min-height: calc(100vh - 90px);
+}
+
+
+/* =========================================
+   LADO ESQUERDO - IMAGEM
+========================================= */
+
+.login-imagem {
+    width: 55%;
+    min-height: 700px;
+
+    background-image: url("../assets/imgs/Surfista de Costas - Login.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+.login-imagem-texto {
+    position: absolute;
+
+    top: 12%;
+    left: 9%;
+
+    max-width: 420px;
+    color: #073B4C;
+}
+
+.login-imagem-texto h1 {
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.linha-decorativa {
+    width: 55px;
+    height: 3px;
+
+    background-color: #75B8C8;
+    margin: 28px 0;
+}
+
+.login-imagem-texto p {
+    max-width: 330px;
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   LADO DIREITO - FORMULÁRIO
+========================================= */
+
+.login-formulario {
+    width: 45%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 60px 50px;
+    background-color: #FFFFFF;
+}
+
+.formulario-conteudo {
+    width: 100%;
+    max-width: 480px;
+}
+
+.formulario-conteudo h2 {
+    font-size: 58px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+.descricao-login {
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #526B7B;
+    margin-bottom: 45px;
+}
+
+
+/* =========================================
+   CAMPOS DO FORMULÁRIO
+========================================= */
+
+.campo {
+    margin-bottom: 25px;
+}
+
+.campo label {
+    display: block;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+
+.campo input {
+    width: 100%;
+    height: 55px;
+
+    padding: 0 18px;
+
+    border: 1px solid #D3DCE2;
+    border-radius: 8px;
+
+    background-color: #FFFFFF;
+
+    font-size: 14px;
+    color: #073B4C;
+
+    outline: none;
+}
+
+.campo input::placeholder {
+    color: #9BAAB5;
+}
+
+.campo input:focus {
+    border-color: #2B6F77;
+}
+
+
+/* CAMPO DE SENHA */
+
+.campo-senha {
+    position: relative;
+}
+
+.campo-senha input {
+    padding-right: 95px;
+}
+
+.btn-mostrar-senha {
+    position: absolute;
+
+    right: 12px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: none;
+    border: none;
+
+    color: #527080;
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.btn-mostrar-senha:hover {
+    color: #073B4C;
+}
+
+
+/* =========================================
+   MENSAGEM DE ERRO
+========================================= */
+
+#mensagem_erro {
+    color: #B42318;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+#mensagem_erro:empty {
+    display: none;
+}
+
+
+/* =========================================
+   BOTÃO ENTRAR
+========================================= */
+
+.btn-entrar {
+    width: 100%;
+    height: 58px;
+
+    background-color: #073B4C;
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-entrar:hover {
+    background-color: #12647A;
+}
+
+
+/* =========================================
+   LINK PARA CADASTRO
+========================================= */
+
+.cadastro-link {
+    margin-top: 40px;
+    padding-top: 30px;
+
+    border-top: 1px solid #D3DCE2;
+    text-align: center;
+}
+
+.cadastro-link p {
+    font-size: 14px;
+    color: #526B7B;
+}
+
+.cadastro-link a {
+    color: #12647A;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - TABLETS
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        gap: 20px;
+    }
+
+    .logo img {
+        width: 170px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a,
+    .nav-conta a {
+        font-size: 12px;
+    }
+
+    .nav-conta {
+        gap: 15px;
+    }
+
+    .login-imagem {
+        width: 50%;
+    }
+
+    .login-formulario {
+        width: 50%;
+        padding: 40px 30px;
+    }
+
+    .login-imagem-texto h1 {
+        font-size: 48px;
+    }
+
+    .formulario-conteudo h2 {
+        font-size: 45px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - CELULARES
+========================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        width: 92%;
+        height: auto;
+
+        padding: 20px 0;
+
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-conta {
+        gap: 12px;
+        margin-left: 0;
+    }
+
+    .nav-links a,
+    .nav-conta a {
+        font-size: 10px;
+    }
+
+    .btn-cadastro {
+        padding: 9px 12px;
+    }
+
+    .main-login {
+        flex-direction: column;
+    }
+
+    .login-imagem {
+        width: 100%;
+        min-height: 280px;
+        background-position: center 55%;
+    }
+
+    .login-imagem-texto {
+        top: 12%;
+        left: 7%;
+    }
+
+    .login-imagem-texto h1 {
+        font-size: 36px;
+    }
+
+    .linha-decorativa {
+        margin: 15px 0;
+    }
+
+    .login-imagem-texto p {
+        max-width: 260px;
+        font-size: 12px;
+    }
+
+    .login-formulario {
+        width: 100%;
+        padding: 45px 25px;
+    }
+
+    .formulario-conteudo h2 {
+        font-size: 40px;
+    }
+
+    .descricao-login {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro | SurfTrack</title>
+
+    <link rel="icon" type="image/jpeg" href="./assets/icon/Icon site.jpg">
+
+    <link rel="stylesheet" href="./css/cadastro.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script src="./js/cadastro.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="./index.html" class="logo">
+                <img src="./assets/imgs/Logo SURFTRACK.png" alt="Logo SurfTrack">
+            </a>
+
+            <div class="nav-links">
+                <a href="./index.html">INÍCIO</a>
+                <a href="./index.html#praias">PRAIAS</a>
+                <a href="./index.html#como-funciona">
+                    COMO FUNCIONA
+                </a>
+            </div>
+
+            <div class="nav-conta">
+                <a href="./login.html" class="link-login">
+                    LOGIN
+                </a>
+
+                <a href="./cadastro.html" class="btn-cadastro">
+                    CADASTRAR
+                </a>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-cadastro">
+
+        <!-- LADO ESQUERDO -->
+        <section class="cadastro-imagem">
+
+            <div class="cadastro-imagem-texto">
+
+                <h1>
+                    Sua jornada<br>
+                    começa aqui
+                </h1>
+
+                <div class="linha-decorativa"></div>
+
+                <p>
+                    Registre suas sessões, explore novas praias
+                    e acompanhe sua evolução no surf.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- LADO DIREITO -->
+        <section class="cadastro-formulario">
+
+            <div class="formulario-conteudo">
+
+                <h2>Criar conta</h2>
+
+                <p class="descricao-cadastro">
+                    Faça parte da comunidade SurfTrack
+                    e transforme cada onda em uma nova história.
+                </p>
+
+
+                <form id="form_cadastro">
+
+                    <!-- NOME -->
+                    <div class="campo">
+
+                        <label for="nome_input">
+                            NOME COMPLETO
+                        </label>
+
+                        <input type="text" id="nome_input" placeholder="Seu nome completo" autocomplete="name" required>
+
+                    </div>
+
+
+                    <!-- E-MAIL -->
+                    <div class="campo">
+
+                        <label for="email_input">
+                            E-MAIL
+                        </label>
+
+                        <input type="email" id="email_input" placeholder="seu@email.com" autocomplete="email" required>
+
+                    </div>
+
+
+                    <!-- SENHA -->
+                    <div class="campo">
+
+                        <label for="senha_input">
+                            SENHA
+                        </label>
+
+                        <div class="campo-senha">
+
+                            <input type="password" id="senha_input" placeholder="Crie uma senha"
+                                autocomplete="new-password" required>
+
+                            <button type="button" class="btn-mostrar-senha" onclick="mostrarSenha('senha_input', this)"
+                                aria-label="Mostrar senha">
+                                Mostrar
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONFIRMAR SENHA -->
+                    <div class="campo">
+
+                        <label for="confirmacao_input">
+                            CONFIRMAR SENHA
+                        </label>
+
+                        <div class="campo-senha">
+
+                            <input type="password" id="confirmacao_input" placeholder="Confirme sua senha"
+                                autocomplete="new-password" required>
+
+                            <button type="button" class="btn-mostrar-senha"
+                                onclick="mostrarSenha('confirmacao_input', this)" aria-label="Mostrar senha">
+                                Mostrar
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MENSAGENS -->
+                    <p id="mensagem_erro" role="alert"></p>
+
+                    <p id="mensagem_sucesso" role="status"></p>
+
+
+                    <!-- BOTÃO CADASTRAR -->
+                    <button type="submit" class="btn-criar-conta">
+                        CADASTRAR CONTA →
+                    </button>
+
+                </form>
+
+
+                <!-- LINK LOGIN -->
+                <div class="login-link">
+
+                    <p>
+                        Já tem uma conta?
+                        <a href="./login.html">
+                            Fazer login
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
