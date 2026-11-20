@@ -40,6 +40,19 @@ CREATE TABLE sessaoSurf (
         REFERENCES praia (idPraia)
 );
 
+    INSERT INTO praia (nome, cidade, uf) VALUES
+('Quebra-Mar', 'Santos', 'SP'),
+('Arpoador', 'Rio de Janeiro', 'RJ'),
+('Barra da Tijuca', 'Rio de Janeiro', 'RJ'),
+('Saquarema', 'Saquarema', 'RJ'),
+('Maresias', 'São Sebastião', 'SP'),
+('Praia da Baleia', 'São Sebastião', 'SP'),
+('Praia do Tombo', 'Guarujá', 'SP');
+
+USE surftrack;
+SELECT idPraia, nome FROM praia;
+
+
 
 
 
