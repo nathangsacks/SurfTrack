@@ -1,105 +1,127 @@
-<img src="https://user-images.githubusercontent.com/46379117/192358781-9ca879e4-e55e-4d0d-b876-f9a4a2ed9ae8.png" width="600px">
 
-_Web Data Visualization = Visualização de Dados na Web_
+<div align="center">
 
-_Implementação de Referência para o seu Projeto de Primeiro Semestre_
+<img src="./public/assets/imgs/Logo%20SURFTRACK.png" alt="Logo SurfTrack" width="600">
 
-<hr>
+### Cada onda conta uma história.
 
-# Como usar
+**Projeto Individual | Análise e Desenvolvimento de Sistemas**
 
-1. Clone este repositório em sua máquina.
+São Paulo Tech School — SPTech | 2026/2
 
+</div>
 
-1. Crie, no Banco de Dados, as tabelas necessárias para o funcionamento deste projeto.
-- Siga as instruções no arquivo **/src/database/script-tabelas.sql**
+---
 
+## Sobre o projeto
 
-3. Acesse o arquivo **app.js** e parametrize o ambiente.
-- Se você estiver utilizando o Ambiente de Produção (remoto), comente a linha 2 e deixe habilitada a linha 1 onde está o valor **var ambiente_processo = 'producao';**
-- Se você estiver utilizando o Ambiente de Desenvolvimento (local), comente a linha 1 e deixe habilitada a linha 2 onde está o valor **var ambiente_processo = 'desenvolvimento';**
+O **SurfTrack** é uma plataforma web desenvolvida para surfistas que desejam registrar suas sessões de surf e acompanhar sua evolução no esporte.
 
-4. Adicione as credenciais de Banco de Dados no arquivo **.env** ou em **.env.dev**, seguindo as instruções neste.
+A proposta é transformar cada experiência no mar em informações organizadas, permitindo ao usuário visualizar seu histórico, conhecer melhor seus hábitos e acompanhar seus indicadores pessoais.
 
-5. Acesse este repositório no seu terminal (GitBash ou VSCode) e execute os comandos abaixo:
+O projeto foi desenvolvido durante o primeiro semestre do curso de **Análise e Desenvolvimento de Sistemas da São Paulo Tech School (SPTech)**, unindo a paixão pelo surf aos conhecimentos adquiridos em programação.
 
+## Funcionalidades
+
+- **Cadastro e login:** criação de contas e acesso à plataforma.
+- **Exploração de praias:** apresentação de praias brasileiras para a prática do surf.
+- **Registro de sessões:** informações sobre data, praia, duração, quantidade de ondas, tamanho da prancha e avaliação.
+- **Histórico de sessões:** acompanhamento dos registros realizados pelo surfista.
+- **Dashboard:** visualização de indicadores pessoais, como total de sessões, tempo no mar, ondas surfadas e nota média.
+- **Gráfico de praias:** identificação das praias mais frequentadas pelo usuário.
+
+> Algumas funcionalidades estão em desenvolvimento e integração com o banco de dados.
+
+## Tecnologias utilizadas
+
+O SurfTrack utiliza as seguintes tecnologias:
+
+- **HTML5:** estrutura das páginas.
+- **CSS3:** estilização e responsividade.
+- **JavaScript:** validação de formulários e interatividade.
+- **Node.js e Express:** desenvolvimento do backend e das rotas da API.
+- **MySQL:** armazenamento dos dados.
+- **Git e GitHub:** versionamento e acompanhamento do projeto.
+
+## Estrutura do projeto
+
+O SurfTrack possui quatro páginas principais:
+
+| Página | Descrição |
+|---|---|
+| Home | Apresentação da plataforma e das praias |
+| Cadastro | Criação de conta do usuário |
+| Login | Acesso à plataforma |
+| Dashboard | Registro e acompanhamento das sessões de surf |
+
+## Banco de dados
+
+O banco de dados `surftrack` foi estruturado em três tabelas principais:
+
+- `usuario`: informações dos usuários cadastrados.
+- `praia`: cadastro das praias disponíveis.
+- `sessaoSurf`: armazenamento das sessões de surf, relacionadas aos usuários e às praias.
+
+## Como executar o projeto
+
+**1. Clone o repositório:**
+
+```bash
+git clone https://github.com/nathangsacks/SurfTrack.git
 ```
-npm i
-``` 
-_O comando acima irá instalar as bibliotecas necessárias para o funcionamento do projeto. As bibliotecas a serem instaladas estão listadas no arquivo **package.json** então é muito importante que este não seja alterado. Será criada uma nova pasta/diretório chamado **node_modules** quando o comando for finalizado, que é onde as bibliotecas estão localizadas. Não altere a pasta/diretório._
 
+**2. Acesse a pasta do projeto:**
+
+```bash
+cd SurfTrack
 ```
+
+**3. Instale as dependências:**
+
+```bash
+npm install
+```
+
+**4. Configure o banco de dados:**
+
+Crie o banco MySQL utilizando o script disponível em:
+
+`src/database/script-tabelas.sql`
+
+Configure as variáveis de ambiente do projeto com as informações de conexão do seu MySQL.
+
+**5. Inicie o servidor:**
+
+```bash
 npm start
-``` 
+```
 
-_O comando acima irá iniciar seu projeto e efetuar os comandos de acordo com a sua parametrização feita nos passos anteriores._
+**6. Acesse a aplicação:**
 
-6. Para "ver" seu projeto funcionando, acesse em seu navegador o caminho **informado no terminal**.
+```text
+http://localhost:3333
+```
 
-7. Caso queira parar a execução, tecle **CTRL+C** no terminal em que o projeto está rodando.
+A porta poderá variar conforme as configurações do ambiente.
 
-## Adicionar novo recurso ao projeto
+---
 
-**"Recurso? O que é?"** Enquanto no Banco de Dados chamamos as tabelas de "entidades", quando tratamos de desenvolvimento WEB usamos a palavra "recurso" para se referir a algo que podemos criar, ler, atualizar ou deletar [1]. Estas ações são conhecidas como CRUD: Create, Read, Update e Delete. Para acessar cada ação, usamos os métodos HTTP: POST, GET, PUT e DELETE [2]. (Há outros verbos, porém com estes já conseguimos efetuar CRUDs). 
+## Autor
 
-**Tabela para ajudar a fazer a associação**
+**Nathan Gabriel Sacks**
 
-<table>
-  <tr>
-    <th>C.R.U.D</th>
-    <th>Ação</th>
-    <th>Tradução</th>
-    <th>Verbo HTTP *</th>
-    <th>Comando BD</th>
-  </tr>
-  <tr>
-    <td>C</td>
-    <td>Create</td>
-    <td>Criar</td>
-    <td>POST</td>
-    <td>INSERT</td>
-  </tr>
-  <tr>
-    <td>R</td>
-    <td>Read</td>
-    <td>Ler</td>
-    <td>GET</td>
-    <td>SELECT</td>
-  </tr>
-  <tr>
-    <td>U</td>
-    <td>Update</td>
-    <td>Atualizar</td>
-    <td>PUT</td>
-    <td>UPDATE</td>
-  </tr>
-  <tr>
-    <td>D</td>
-    <td>Delete</td>
-    <td>Deletar</td>
-    <td>DELETE</td>
-    <td>DELETE</td>
-  </tr>
-</table>
+Análise e Desenvolvimento de Sistemas — 1º semestre
 
-_* Você verá o verbo HTTP sendo apontado nos arquivos em /routes_
+São Paulo Tech School — SPTech
 
-**"E no meu projeto, o que seria um recurso?"** Em web-data-viz manipulamos os recursos **usuário**, **aviso** e **medida**. Podemos conferir isso vendo para quais entidades foram criados os caminhos de inserção e captura de dados, que envolve os diretórios **routes**, **controllers** e **models**.
+Projeto Individual — 2026/2
 
-Abaixo, uma figura que ajuda a compreender o caminho percorrido para, por exemplo, efetuar o cadastro de um usuário:
+---
 
+<div align="center">
 
-![image](https://github.com/user-attachments/assets/d576f178-0da6-437e-b5c9-658e3ebaf6ca)
+**SURFTRACK**
 
+*Cada onda conta uma história.*
 
-
-**Entendi o que é um recurso e gostaria de adicionar um novo ao meu projeto! Como faz?**  
-- Primeiro, crie a tabela no Banco de Dados referente a este recurso. Exemplos de recursos comuns de serem adicionados ao projeto no primeiro semestre: Silo, Aquário, Sala, Andar, Endereço, Mercado, Prateleira, Unidade, Carro, Caminhão...  
-- Assim que criada a tabela, faça todo o caminho de **front-end → routes → controllers → models** replicando o que já existe!  
-- Exemplo, se você quiser a funcionalidade de adicionar um novo Aquário, deve criar arquivos referentes ao aquario nos diretórios e replicar também as funções.  
-- Dica: A implementação de AVISO já contém o CRUD completo! :wink:
- 
-### Fontes bibliográficas
-
-[1] https://datatracker.ietf.org/doc/html/rfc2396  
-[2] https://datatracker.ietf.org/doc/html/rfc7231
+</div>
